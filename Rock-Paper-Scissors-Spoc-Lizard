@@ -1,0 +1,66 @@
+import java.util.Scanner;
+public class exercise_5 {
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter your champion: R, P, S, L, O");
+        String player = scanner.next();
+        int randomness = (int)(Math.random()*5);
+        String computer;
+        int output = 4;
+
+        if(randomness == 0){
+            computer ="R";}
+        else if(randomness == 1){
+            computer = "P";}
+        else if(randomness == 2){
+            computer = "S";}
+        else if(randomness == 3){
+            computer = "L";}
+        else{
+            computer = "O";}
+
+        if(player.equalsIgnoreCase("R")){
+            if(computer == ("R")){
+                output = 0;}
+            else if(computer == "S" || computer == "L"){
+                output = 1;}
+            else{
+                output = 2;}}
+        else if(player.equalsIgnoreCase("P")){
+            if(computer == "P"){
+                output = 0;}
+            else if(computer == "O" || computer == "R"){
+                output = 1;}
+            else{
+                output = 2;}}
+        else if(player.equalsIgnoreCase("S")){
+            if(computer == "S"){
+                output = 0;}
+            else if(computer == "L" || computer == "O"){
+                output = 1;}
+            else{
+                output = 2;}}
+        else if(player.equalsIgnoreCase("L")){
+            if(computer == "L"){
+                output = 0;}
+            else if(computer == "P" || computer == "O"){
+                output = 1;}
+            else{
+                output = 2;}}
+        else if(player.equalsIgnoreCase("O")){
+            if(computer == "O"){
+                output = 0;}
+            else if(computer == "R" || computer == "S"){
+                output = 1;}
+            else{
+                output = 2;}}
+
+        System.out.println("Computer chose: " + computer);
+        if(output == 0){
+            System.out.println("Tie");}
+        else if(output == 1) {
+            System.out.println("You win");}
+        else {
+            System.out.println("You lose");}
+        }
+}
