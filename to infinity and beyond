@@ -11,6 +11,9 @@ public class exercise_3 {
         System.out.println("dice sides: ");
         int sides = scanner.nextInt();
 
-        System.out.printf("%.0f",Math.random()*sides);
+        if(Math.random()==0)
+            System.out.println("The dice fell of the table");
+        else
+            System.out.printf("%.0f",Math.random()*sides);
     }
 }
