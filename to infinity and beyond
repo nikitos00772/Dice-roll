@@ -1,0 +1,16 @@
+/**Some more recent (and geeky) boardgames use dice with different numbers of sides
+ 4, 6, 8, 10, 12, 20, ... . Write a Java program called Dice that first asks the user
+ for the number of sides on the dice he or she wants to roll, and then simulates a random
+ roll with that die and prints the result.
+ Your program should roll a fair dice, with equal probabilities for all possible outcomes
+ and work for all whole positive numbers, not just for the 6 values listed above.*/
+import java.util.Scanner;
+public class exercise_3 {
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("dice sides: ");
+        int sides = scanner.nextInt();
+
+        System.out.printf("%.0f",Math.random()*sides);
+    }
+}
